@@ -69,7 +69,7 @@ def resize_and_crop_image_from_image(image, custom_width_mm=210, custom_height_m
     img1_cropped = img1_resized.crop((offset_x, 0, offset_x + mm_to_pixels(custom_width_mm, target_dpi), mm_to_pixels(custom_height_mm, target_dpi)))
 
     # Create a new image with the specified dimensions
-    result_img = Image.new("RGB", (mm_to_pixels(custom_width_mm, target_dpi), mm_to_pixels(custom_height_mm, target_dpi)), (255, 255, 255))
+    result_img = Image.new("RGB", (mm_to_pixels(custom_width_mm, target_dpi), mm_to_pixels(custom_height_mm, target_dpi)), (0, 0, 0))
 
     # Paste the cropped image onto the new image
     result_img.paste(img1_cropped, (0, 0))
@@ -79,5 +79,39 @@ def resize_and_crop_image_from_image(image, custom_width_mm=210, custom_height_m
 
     # Save the result image
     # result_img.save(output_path, dpi=(target_dpi, target_dpi))
+
+    return result_img
+
+
+def fill_custom_size(image, custom_width_mm, custom_height_mm, target_dpi, custom_offset_x):
+    # Calculate aspect ratio of the original image
+    aspect_ratio = image.width / image.height
+
+    # Calculate dimensions to match aspect ratio and fit custom size
+    custom_width = mm_to_pixels(custom_width_mm, target_dpi)
+    custom_height = mm_to_pixels(custom_height_mm, target_dpi)
+
+    # Resize the image to cover the entire custom width and height
+    # if aspect_ratio > 1:
+    #     new_width = custom_width
+    #     new_height = int(custom_width / aspect_ratio)
+    # else:
+    #     print('efra')
+    new_height = custom_height
+    new_width = int(custom_height * aspect_ratio)
+
+    resized_image = image.resize((new_width, new_height), Image.LANCZOS)
+
+    # Create a new image with the specified dimensions
+    result_img = Image.new("RGB", (custom_width, custom_height), (0, 0, 0))
+
+    # Calculate the offset to center the resized image
+    offset_x = int((custom_width - resized_image.width) / 2) + mm_to_pixels(custom_offset_x, target_dpi)
+
+    # Paste the resized image onto the new image, considering the x-offset
+    result_img.paste(resized_image, (offset_x, 0))
+
+    # Set DPI metadata
+    result_img.info['dpi'] = (target_dpi, target_dpi)
 
     return result_img

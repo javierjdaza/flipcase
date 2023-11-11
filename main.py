@@ -3,7 +3,7 @@ from io import StringIO
 from streamlit_option_menu import option_menu
 import base64
 from utils import iphone_models,hide_watermarks
-from fit_images import resize_and_crop_image_from_image
+from fit_images import fill_custom_size
 from PIL import Image
 
 # ------------------------
@@ -84,7 +84,7 @@ if menu_bar_selected == 'Upload':
                 # st.toast('Image uploaded succesfully! ', icon='🎉')
                 _custom_width = iphone_models[model_selected]['width']
                 _custom_height = iphone_models[model_selected]['height']
-                image_resize = resize_and_crop_image_from_image(_image_pillow, custom_width_mm=_custom_width, custom_height_mm=_custom_height, custom_offset_x=_custom_offset, target_dpi=600, output_path="output_image.jpg")
+                image_resize = fill_custom_size(_image_pillow, custom_width_mm=_custom_width, custom_height_mm=_custom_height, custom_offset_x=_custom_offset, target_dpi=600)
                 st.image(image_resize, width=200)
                 
                 
