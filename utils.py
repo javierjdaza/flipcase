@@ -1,6 +1,6 @@
 import streamlit as st 
 
-iphone_models = {
+IPHONE_MODELS = {
     'iPhone 11': 
         {
             'height' : 143.03,
@@ -75,6 +75,27 @@ iphone_models = {
         }
 
 
+POSTCARDS_SIZES = {
+
+    'Small': 
+            {
+            'width': 122.4,
+            'height' : 87
+            },
+    'Large':
+            {
+            'width': 152.4,
+            'height' : 108
+            },
+    'Square':
+            {
+            'width': 100,
+            'height' : 100
+            },
+            
+    
+}
+
 def hide_watermarks():
     hide_streamlit_style = """
             <style>
@@ -83,3 +104,48 @@ def hide_watermarks():
             </style>
             """
     return st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+def center_image_streamlit():
+    center_image_streamlit_style = """
+            <style>
+            [data-testid="stImage"]{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                
+            }
+            </style>
+            
+            """
+    st.markdown(center_image_streamlit_style, unsafe_allow_html=True)
+    
+def center_button():
+    center_button_streamlit_style = """
+        <style>
+        [data-testid="baseButton-primary"]{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #000;
+            border: 1px solid #000;
+            box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+            box-sizing: border-box;
+            color: #fff;
+            font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            overflow: visible;
+            padding: 12px 40px;
+            text-align: center;
+            text-transform: none;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        </style>
+        """
+    return st.markdown(center_button_streamlit_style, unsafe_allow_html=True)
+
