@@ -95,4 +95,10 @@ if menu_bar_selected == 'Upload':
                 tab_2.get_postcard_tab()
         
 
-        
+if menu_bar_selected == 'Contact':
+    
+    e1,e2 = st.columns(2)
+    with e1:
+        st.image('./img/efra.jpeg', use_column_width=True)
+    with e2:
+        st.image('./img/efra1.jpeg', use_column_width=True)
