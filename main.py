@@ -31,7 +31,7 @@ st.image('./img/svg_flipcase.png',width=250 )
 
 
 st.write('---')
-menu_bar_selected = option_menu(None, ["Home", "Upload", 'About Us'], 
+menu_bar_selected = option_menu(None, ["Home", "Upload", 'Contact'], 
     icons=['house', 'cloud-upload', 'file-person-fill'], 
     menu_icon="cast", default_index=0, orientation="horizontal")
 st.write('---')

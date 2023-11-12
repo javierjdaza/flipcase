@@ -2,7 +2,6 @@ import streamlit as st
 from fit_images import fill_custom_size,fill_custom_size_height
 from utils import IPHONE_MODELS,POSTCARDS_SIZES
 from PIL import Image
-import  streamlit_vertical_slider  as svs
 
 
 

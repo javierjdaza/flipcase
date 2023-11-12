@@ -843,17 +843,6 @@ python-versions = ">=3.6"
 streamlit = ">=0.63"
 
 [[package]]
-name = "streamlit-vertical-slider"
-version = "1.0.2"
-description = "Creates a customizable vertical slider"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-streamlit = ">=0.63"
-
-[[package]]
 name = "tenacity"
 version = "8.2.3"
 description = "Retry code until it succeeds"
@@ -997,7 +986,7 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "e87f554522829a5cd59d9c75aa9baab95605bb4ab95bde7361b6e5ebdc650e60"
+content-hash = "5b2369c3f7abd579d9470d31cb08e12bba87791886502e6fdfcf60a0bb6dcb58"
 
 [metadata.files]
 altair = [
@@ -1833,10 +1822,6 @@ streamlit = [
 streamlit-option-menu = [
     {file = "streamlit-option-menu-0.3.6.tar.gz", hash = "sha256:4f02faadf4d1d1e9a00c3740a2ebd8a3f105a2cdf63fdc0e34cf01ef7267e9de"},
     {file = "streamlit_option_menu-0.3.6-py3-none-any.whl", hash = "sha256:d051af217ff1e4513e2cc6f3c79ccd4b34d77390b16c34711032e998d41e9850"},
-]
-streamlit-vertical-slider = [
-    {file = "streamlit_vertical_slider-1.0.2-py3-none-any.whl", hash = "sha256:ab727cd5c1799c1d9a19c6201ff2a9bcda08222c849c5670ad7a0d994c9fdcdc"},
-    {file = "streamlit_vertical_slider-1.0.2.tar.gz", hash = "sha256:6eaee79a397341eee6ec7862b77d27d548d2bdd126812fd811f831bd4d561f48"},
 ]
 tenacity = [
     {file = "tenacity-8.2.3-py3-none-any.whl", hash = "sha256:ce510e327a630c9e1beaf17d42e6ffacc88185044ad85cf74c0a8887c6a0f88c"},
