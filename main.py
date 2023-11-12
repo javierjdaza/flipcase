@@ -64,7 +64,7 @@ if menu_bar_selected == 'Upload':
             st.write('---')
             model_selected = st.selectbox('**Select the model:**', options = IPHONE_MODELS.keys())
             st.write('---')
-            st.markdown("<h3 style='text-align: center; color: #171717;'>Select The Pictures<br> Be Creative!🎆'</h3>", unsafe_allow_html=True)
+            st.markdown("<h3 style='text-align: center; color: #171717;'>Select The Pictures<br> Be Creative!🎆</h3>", unsafe_allow_html=True)
             tab1, tab2 = st.tabs(["Image 1", "Image 2"])
             
             
@@ -84,7 +84,7 @@ if menu_bar_selected == 'Upload':
             st.write('---')
             size_selected = st.selectbox('**Select the size:**', options = POSTCARDS_SIZES.keys())
             st.write('---')
-            st.markdown("<h3 style='text-align: center; color: #171717;'>Select The Pictures<br> Be Creative!🎆'</h3>", unsafe_allow_html=True)
+            st.markdown("<h3 style='text-align: center; color: #171717;'>Select The Pictures<br> Be Creative!🎆</h3>", unsafe_allow_html=True)
             tab1, tab2 = st.tabs(["Image 1", "Image 2"])
             with tab1:
                 tab_1 = Gen_Tab(model_selected=size_selected, key= 'post_1')

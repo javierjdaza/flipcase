@@ -39,7 +39,7 @@ class Gen_Tab():
                 image_resize,aspect_ratio_input = fill_custom_size(_image_pillow, custom_width_mm=_custom_width, custom_height_mm=_custom_height, custom_offset_x=_custom_offset_x, target_dpi=100)
                 st.image(image_resize, width=200)
                 if aspect_ratio_input > 1:
-                    st.toast('For better results try to select vertical images, instead of wide ones', icon='⚠️')
+                    st.warning('For better results try to select vertical images, instead of wide ones', icon='⚠️')
     
     
     def get_postcard_tab(self):
@@ -71,4 +71,4 @@ class Gen_Tab():
                 image_resize,aspect_ratio_input = fill_custom_size_height(_image_pillow, custom_width_mm=_custom_width, custom_height_mm=_custom_height, custom_offset_x=_custom_offset_x,custom_offset_y = _custom_offset_y, target_dpi=100)
                 st.image(image_resize, use_column_width=True)
                 if aspect_ratio_input < 1:
-                    st.toast('For better results try to select wide images, instead of vertical ones', icon='⚠️')
+                    st.warning('For better results try to select wide images, instead of vertical ones', icon='⚠️')
