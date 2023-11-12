@@ -30,7 +30,7 @@ class Gen_Tab():
                 _custom_offset_x = st.slider(f'{self._key}', min_value = -50, max_value=50, value=0, step=1, label_visibility='hidden')
                 st.markdown("<h6 style='text-align: center; color: #7F8487;'>X-axis align</h6>", unsafe_allow_html=True)
                 st.write('---')
-                st.markdown("<h6 style='text-align: center; color: #171717;'>Move the slider (left or right) to fit the image.<br> Take your time! ⌛\nfinished? Click 'create'</h6>", unsafe_allow_html=True)
+                st.markdown("<h6 style='text-align: center; color: #171717;'>Move the slider (left or right) to fit the image.<br> Take your time! ⌛</h6>", unsafe_allow_html=True)
                 create_button = st.button('C R E A T E', type='primary', key= f'{self._key}_button')
                 if create_button:
                     st.toast('EFRAIN APONTE', icon='🧟')

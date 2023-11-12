@@ -14,7 +14,7 @@ _menu_items = {
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 st.set_page_config(page_title='Flip Case Customize!', page_icon = ':brain:', layout="wide", initial_sidebar_state="collapsed", menu_items=_menu_items)
-# hide_watermarks()
+hide_watermarks()
 center_image_streamlit()
 center_button()
 
