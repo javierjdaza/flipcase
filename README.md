@@ -1,3 +1,3 @@
 # flipcase
 
-![plot](./img/autoretrain_png.png)
+![plot](./img/svg_flipcase.png)
